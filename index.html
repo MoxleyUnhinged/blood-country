@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Country UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="backdrop"></div>
+    <main class="site-shell">
+      <section class="hero panel glow">
+        <div>
+          <p class="eyebrow">AUSTRALIAN FOLKLORE RPG UI</p>
+          <h1>Blood Country</h1>
+          <p class="lede">
+            A website-based RPG interface scaffold for outback horror, mythic investigations, trackers, scenes, and player sheets.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <button class="primary" data-nav="play">Open Play Surface</button>
+          <button class="secondary" data-nav="lore">View Lore Index</button>
+        </div>
+      </section>
+
+      <section class="overview-grid">
+        <article class="panel stat-card">
+          <span class="label">Campaign Tone</span>
+          <strong>Dust, omens, waterholes, voices in scrub</strong>
+        </article>
+        <article class="panel stat-card">
+          <span class="label">UI Focus</span>
+          <strong>Character sheets, scenes, trackers, lore, encounter flow</strong>
+        </article>
+        <article class="panel stat-card">
+          <span class="label">Extensible Base</span>
+          <strong>Structured state and render helpers in plain JavaScript</strong>
+        </article>
+      </section>
+
+      <section class="app-grid" id="play">
+        <aside class="panel sidebar">
+          <h2>Navigator</h2>
+          <nav class="nav-list">
+            <button class="nav-chip active" data-tab="dashboard">Dashboard</button>
+            <button class="nav-chip" data-tab="character">Character</button>
+            <button class="nav-chip" data-tab="campaign">Campaign</button>
+            <button class="nav-chip" data-tab="lore">Lore</button>
+            <button class="nav-chip" data-tab="gm">GM Tools</button>
+          </nav>
+
+          <div class="sidebar-block">
+            <h3>Session Status</h3>
+            <div id="sessionBadges" class="badge-stack"></div>
+          </div>
+
+          <div class="sidebar-block">
+            <h3>Scene Pulse</h3>
+            <p id="scenePulse"></p>
+          </div>
+
+          <div class="sidebar-block">
+            <h3>State Tools</h3>
+            <div class="stack">
+              <div class="actions-inline">
+                <button class="secondary" id="saveBrowserBtn">Save Browser State</button>
+                <button class="secondary" id="loadBrowserBtn">Load Browser State</button>
+              </div>
+              <div class="actions-inline">
+                <button class="secondary" id="exportJsonBtn">Export JSON</button>
+                <button class="secondary" id="importJsonBtn">Import JSON</button>
+              </div>
+              <button class="secondary" id="resetStateBtn">Reset To Sample Data</button>
+              <input id="importFileInput" type="file" accept="application/json" class="hidden-input" />
+              <p id="saveStatus" class="status-note">No save action taken yet.</p>
+            </div>
+          </div>
+        </aside>
+
+        <section class="panel tab-panel active" data-panel="dashboard">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">CURRENT CHAPTER</p>
+              <h2 id="dashboardTitle"></h2>
+            </div>
+            <button class="secondary" id="advanceSceneBtn">Advance Scene</button>
+          </div>
+
+          <div class="tracker-grid" id="trackerGrid"></div>
+
+          <div class="content-grid two-up">
+            <article class="subpanel">
+              <h3>Investigator Team</h3>
+              <div id="partyList" class="stack"></div>
+            </article>
+            <article class="subpanel">
+              <h3>Field Log</h3>
+              <div id="logList" class="stack log-list"></div>
+            </article>
+          </div>
+
+          <article class="subpanel">
+            <h3>Resolution Console</h3>
+            <div id="resolutionConsole" class="editor-stack"></div>
+          </article>
+        </section>
+
+        <section class="panel tab-panel" data-panel="character">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">CHARACTER SHEET</p>
+              <h2 id="characterName"></h2>
+            </div>
+            <button class="secondary" id="randomiseStressBtn">Test Stress UI</button>
+          </div>
+
+          <div class="content-grid two-up">
+            <article class="subpanel">
+              <h3>Attributes</h3>
+              <div id="attributeGrid" class="attribute-grid"></div>
+            </article>
+            <article class="subpanel">
+              <h3>Skills</h3>
+              <div id="skillList" class="stack"></div>
+            </article>
+          </div>
+
+          <article class="subpanel">
+            <h3>Traits & Hooks</h3>
+            <div id="traitList" class="tag-list"></div>
+          </article>
+
+          <article class="subpanel">
+            <h3>Inventory & Equipment</h3>
+            <div id="equipmentList" class="content-grid two-up"></div>
+          </article>
+
+          <article class="subpanel">
+            <h3>Edit Character</h3>
+            <div id="characterEditor" class="editor-stack"></div>
+          </article>
+        </section>
+
+        <section class="panel tab-panel" data-panel="campaign">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">SCENE TRACKER</p>
+              <h2>Campaign Board</h2>
+            </div>
+          </div>
+
+          <article class="subpanel progress-panel">
+            <div class="progress-row">
+              <span>Chapter Progress</span>
+              <strong id="campaignPercent"></strong>
+            </div>
+            <div class="progress-shell">
+              <div id="campaignBar" class="progress-bar"></div>
+            </div>
+          </article>
+
+          <div id="sceneBoard" class="scene-board"></div>
+
+          <div class="content-grid two-up">
+            <article class="subpanel">
+              <h3>Edit Campaign</h3>
+              <div id="campaignEditor" class="editor-stack"></div>
+            </article>
+            <article class="subpanel">
+              <h3>Edit Scene</h3>
+              <div id="sceneEditor" class="editor-stack"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel tab-panel" data-panel="lore">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">FOLKLORE INDEX</p>
+              <h2>Myths, Threats, Country</h2>
+            </div>
+          </div>
+
+          <div class="filter-row" id="loreFilters"></div>
+          <div id="loreGrid" class="lore-grid"></div>
+
+          <article class="subpanel">
+            <h3>Edit Lore Entry</h3>
+            <div id="loreEditor" class="editor-stack"></div>
+          </article>
+        </section>
+
+        <section class="panel tab-panel" data-panel="gm">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">GM SURFACE</p>
+              <h2>Encounter Control</h2>
+            </div>
+          </div>
+
+          <div class="content-grid two-up">
+            <article class="subpanel">
+              <h3>Pressure Controls</h3>
+              <div class="control-grid">
+                <label>
+                  Threat
+                  <input id="threatInput" type="range" min="0" max="20" />
+                </label>
+                <label>
+                  Doom
+                  <input id="doomInput" type="range" min="0" max="10" />
+                </label>
+                <label>
+                  Omen
+                  <input id="omenInput" type="range" min="0" max="12" />
+                </label>
+              </div>
+            </article>
+            <article class="subpanel">
+              <h3>GM Notes</h3>
+              <textarea id="gmNote" rows="8" placeholder="Drop scene beats, threats, or clue prompts here."></textarea>
+              <div class="actions-inline">
+                <button class="secondary" id="importGmNotesCsvBtn">Import GM Notes CSV</button>
+                <button class="secondary" id="exportGmNotesCsvBtn">Export GM Notes CSV</button>
+              </div>
+              <input id="gmNotesCsvInput" type="file" accept=".csv,text/csv" class="hidden-input" />
+              <button class="primary" id="appendNoteBtn">Add Note To Log</button>
+            </article>
+          </div>
+
+          <article class="subpanel">
+            <h3>Player Roster</h3>
+            <div id="playerTrackerEditor" class="editor-stack"></div>
+          </article>
+
+          <div class="content-grid three-up">
+            <article class="subpanel">
+              <h3>Scenarios</h3>
+              <div id="scenarioEditor" class="editor-stack"></div>
+            </article>
+            <article class="subpanel">
+              <h3>Encounters</h3>
+              <div id="encounterEditor" class="editor-stack"></div>
+            </article>
+            <article class="subpanel">
+              <h3>Creatures</h3>
+              <div id="creatureEditor" class="editor-stack"></div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
