@@ -1,0 +1,46 @@
+[
+  {
+    "type": "player",
+    "id": "mara-quinn",
+    "sourceId": "mara-quinn",
+    "name": "Mara Quinn",
+    "roleOrCategory": "Tracker",
+    "initiative": "12",
+    "hp": "10",
+    "maxHp": "10",
+    "stress": "6"
+  },
+  {
+    "type": "player",
+    "id": "tom-wren",
+    "sourceId": "tom-wren",
+    "name": "Tom Wren",
+    "roleOrCategory": "Stockman",
+    "initiative": "11",
+    "hp": "11",
+    "maxHp": "11",
+    "stress": "3"
+  },
+  {
+    "type": "creature",
+    "id": "creature-init-quinkan-shade",
+    "sourceId": "quinkan-shade",
+    "name": "Quinkan Shade",
+    "roleOrCategory": "Rock-shadow entity",
+    "initiative": "10",
+    "hp": "12",
+    "maxHp": "12",
+    "stress": "0"
+  },
+  {
+    "type": "creature",
+    "id": "creature-init-bog-howler",
+    "sourceId": "bog-howler",
+    "name": "Bog Howler",
+    "roleOrCategory": "Swamp beast",
+    "initiative": "9",
+    "hp": "14",
+    "maxHp": "14",
+    "stress": "0"
+  }
+]

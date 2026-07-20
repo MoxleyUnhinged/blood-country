@@ -1,0 +1,50 @@
+[
+  {
+    "id": "mara-quinn",
+    "name": "Mara Quinn",
+    "role": "Tracker",
+    "initiative": "12",
+    "hp": "10",
+    "maxHp": "10",
+    "stress": "6",
+    "st": "10",
+    "dx": "11",
+    "iq": "13",
+    "ht": "10",
+    "will": "13",
+    "per": "12",
+    "notes": "Lead investigator and primary witness to the lights."
+  },
+  {
+    "id": "tom-wren",
+    "name": "Tom Wren",
+    "role": "Stockman",
+    "initiative": "11",
+    "hp": "11",
+    "maxHp": "11",
+    "stress": "3",
+    "st": "11",
+    "dx": "10",
+    "iq": "10",
+    "ht": "11",
+    "will": "10",
+    "per": "11",
+    "notes": "Reliable with routes but spooks easily in open dark country."
+  },
+  {
+    "id": "ellen-vale",
+    "name": "Ellen Vale",
+    "role": "Schoolteacher Occultist",
+    "initiative": "10",
+    "hp": "9",
+    "maxHp": "9",
+    "stress": "8",
+    "st": "9",
+    "dx": "10",
+    "iq": "12",
+    "ht": "9",
+    "will": "12",
+    "per": "11",
+    "notes": "Knows comparative folklore and pattern recognition rituals."
+  }
+]
