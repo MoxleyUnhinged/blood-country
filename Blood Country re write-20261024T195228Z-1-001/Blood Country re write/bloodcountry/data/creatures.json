@@ -1,0 +1,147 @@
+[
+  {
+    "name": "Saltwater Crocodile", "tier": "Common", "category": "Animal",
+    "region": "Kimberley, Pilbara, any northern waterway",
+    "st": 28, "dx": 9, "iq": 3, "ht": 13, "hp": 28, "will": 10, "per": 12, "fp": 13,
+    "speed": 5.5, "move": "3 (land) / 6 (water)", "sm": 2, "dr": 5,
+    "traits": ["Amphibious", "Cold-Blooded (below 15C, -3 to active rolls)", "Doesn't Breathe (2 hrs)",
+               "Enhanced Move 1 (water)", "Night Vision 5", "Peripheral Vision", "Silence 3 (in water)"],
+    "attacks": [
+      {"name": "Bite", "dice": 4, "adds": 0, "type": "cut"},
+      {"name": "Tail Sweep", "dice": 3, "adds": 0, "type": "cr"}
+    ],
+    "notes": "Death roll: contested ST each round, repeat bite damage plus 1d seconds submerged. Ambush from water gives +4 to attack and no Dodge on round one. Run Per rolls early and consistently."
+  },
+  {
+    "name": "Eastern Brown Snake", "tier": "Common", "category": "Animal",
+    "region": "All eastern and northern scenarios",
+    "st": 2, "dx": 14, "iq": 2, "ht": 12, "hp": 2, "will": 9, "per": 12, "fp": 12,
+    "speed": 7.5, "move": "7", "sm": -2, "dr": 0,
+    "traits": ["Doesn't Manipulate", "Enhanced Dodge 2", "Temperature Sensitivity (inactive below 15C)", "Vibration Detection 10m"],
+    "attacks": [{"name": "Bite", "dice": 1, "adds": -3, "type": "cut"}],
+    "venom": "eastern_brown",
+    "notes": "Strikes when surprised at close range; no Per roll for the victim. The damage is not the danger, the venom is."
+  },
+  {
+    "name": "Inland Taipan", "tier": "Common", "category": "Animal",
+    "region": "Nullarbor fringe, Pilbara, Channel Country",
+    "st": 2, "dx": 15, "iq": 2, "ht": 13, "hp": 2, "will": 9, "per": 13, "fp": 13,
+    "speed": 7.0, "move": "7", "sm": -2, "dr": 0,
+    "traits": ["Cold-Blooded", "Doesn't Manipulate", "Enhanced Dodge 3", "Vibration Detection 10m", "Camouflage (Per-3 to spot)"],
+    "attacks": [{"name": "Bite", "dice": 1, "adds": -4, "type": "cut"}],
+    "venom": "inland_taipan",
+    "notes": "Up to 8 bites per encounter, each a separate venom progression. Needs taipan-specific antivenin."
+  },
+  {
+    "name": "King Brown (Mulga) Snake", "tier": "Uncommon", "category": "Animal",
+    "region": "Kimberley, Pilbara, Nullarbor",
+    "st": 4, "dx": 12, "iq": 2, "ht": 13, "hp": 4, "will": 10, "per": 12, "fp": 13,
+    "speed": 6.5, "move": "6", "sm": -1, "dr": 0,
+    "traits": ["Doesn't Manipulate"],
+    "attacks": [{"name": "Bite (up to 4/round)", "dice": 1, "adds": -2, "type": "cut"}],
+    "venom": "king_brown",
+    "notes": "Bites and holds; each extra bite in a round adds a separate venom roll."
+  },
+  {
+    "name": "Redback Spider", "tier": "Common", "category": "Animal",
+    "region": "Everywhere there is a shed",
+    "st": 1, "dx": 13, "iq": 1, "ht": 10, "hp": 1, "will": 10, "per": 10, "fp": 10,
+    "speed": 5.75, "move": "1", "sm": -7, "dr": 0,
+    "traits": ["Bites when pressed against skin"],
+    "attacks": [{"name": "Bite", "dice": 0, "adds": 0, "type": "cut"}],
+    "venom": "redback",
+    "notes": "Use it to show the campaign does not pause for the supernatural."
+  },
+  {
+    "name": "Wild Boar (Feral Pig)", "tier": "Common", "category": "Animal",
+    "region": "Kimberley, Pilbara, high country approaches",
+    "st": 16, "dx": 9, "iq": 4, "ht": 13, "hp": 16, "will": 9, "per": 11, "fp": 13,
+    "speed": 5.5, "move": "7", "sm": 1, "dr": 2,
+    "traits": ["Acute Smell +4", "Discrimination Smell", "Night Vision 3", "Peripheral Vision"],
+    "attacks": [
+      {"name": "Tusk Slash", "dice": 1, "adds": 1, "type": "cut"},
+      {"name": "Charge (4+ yards)", "dice": 3, "adds": 2, "type": "cr"}
+    ],
+    "notes": "The source template lists IQ 13 which looks like a typo; IQ 4 used (matches the compendium)."
+  },
+  {
+    "name": "Dingo", "tier": "Common", "category": "Animal",
+    "region": "All mainland scenarios",
+    "st": 10, "dx": 12, "iq": 5, "ht": 12, "hp": 10, "will": 9, "per": 15, "fp": 12,
+    "speed": 6.0, "move": "8", "sm": 0, "dr": 1,
+    "traits": ["Acute Hearing +3", "Acute Smell +4", "Night Vision 5", "Peripheral Vision", "Pack Tactics (3+: effective skill +2)"],
+    "attacks": [{"name": "Bite", "dice": 1, "adds": 0, "type": "cut"}],
+    "notes": "Near the ochre gorge or bridges at night, describe them as thinner and quieter."
+  },
+  {
+    "name": "Brumby (feral horse)", "tier": "Uncommon", "category": "Animal",
+    "region": "Snowy Mountains, high country",
+    "st": 25, "dx": 10, "iq": 4, "ht": 13, "hp": 25, "will": 10, "per": 14, "fp": 13,
+    "speed": 7.0, "move": "7 (land) / 28 (full gallop)", "sm": 2, "dr": 2,
+    "traits": ["Acute Hearing +3", "Acute Smell +3", "Enhanced Move 2",
+               "Flight response (Per roll within 10m: freeze or bolt; a bolting mob stampedes)"],
+    "attacks": [{"name": "Hooves (All-Out Attack if bolting)", "dice": 2, "adds": 3, "type": "cr"}],
+    "notes": "Hoof damage written as thr+3 in the source; approximated here as 2d+3. Animal Handling needed within 5m; -2 vs the mob, -1 vs the bay with the white blaze."
+  },
+  {
+    "name": "Cassowary", "tier": "Uncommon", "category": "Animal",
+    "region": "Far North Queensland",
+    "st": 20, "dx": 11, "iq": 4, "ht": 13, "hp": 20, "will": 12, "per": 13, "fp": 13,
+    "speed": 6.0, "move": "8", "sm": 1, "dr": 2,
+    "traits": ["Acute Hearing +2", "Acute Smell +2", "Cannot Fly", "Danger Sense (territorial)", "Territorial (auto-attack within 10m of nest)"],
+    "attacks": [
+      {"name": "Kick (dagger claw)", "dice": 2, "adds": 2, "type": "imp"},
+      {"name": "Charge", "dice": 3, "adds": 0, "type": "cr"}
+    ],
+    "notes": "Cannot be outrun in rainforest. Standing tall and backing away needs Will-1."
+  },
+  {
+    "name": "Perentie (goanna)", "tier": "Common", "category": "Animal",
+    "region": "Kimberley, Nullarbor fringe, arid regions",
+    "st": 12, "dx": 10, "iq": 3, "ht": 12, "hp": 12, "will": 9, "per": 12, "fp": 12,
+    "speed": 5.5, "move": "8", "sm": 1, "dr": 2,
+    "traits": ["Acute Smell +3", "Claws", "Enhanced Move 1 (sprint)", "Teeth", "Bacterial Load (HT-1 vs infection within 24h)"],
+    "attacks": [
+      {"name": "Bite", "dice": 1, "adds": 0, "type": "cut"},
+      {"name": "Tail Sweep", "dice": 1, "adds": 2, "type": "cr"}
+    ],
+    "notes": "Leaves camp abruptly near the Marloo's territory. Treat it as an omen."
+  },
+  {
+    "name": "Mining Security Operative", "tier": "Common", "category": "Human",
+    "region": "Kimberley, Canberra",
+    "st": 11, "dx": 11, "iq": 10, "ht": 11, "hp": 11, "will": 10, "per": 11, "fp": 11,
+    "speed": 5.5, "move": "5", "sm": 0, "dr": 4,
+    "traits": ["Duty (company, 12)", "Sense of Duty (colleagues)", "Code of Honour (won't shoot first)",
+               "Skills: Guns (Pistol) 12, Intimidation 11, Driving (4WD) 12, First Aid 10"],
+    "attacks": [{"name": "9mm pistol", "dice": 2, "adds": 2, "type": "pi"}],
+    "notes": "Will not fire if outnumbered 3:1 by unarmed players. Light body armour DR 4 on torso."
+  },
+  {
+    "name": "Corrupt Bureaucrat", "tier": "Common", "category": "Human",
+    "region": "Canberra",
+    "st": 9, "dx": 10, "iq": 14, "ht": 10, "hp": 9, "will": 13, "per": 13, "fp": 10,
+    "speed": 5.0, "move": "5", "sm": 0, "dr": 0,
+    "traits": ["Skills: Administration 17, Law (Govt/FOI) 15, Research 16, Diplomacy 15", "Cowardice", "Contact Group (Commonwealth bureaucracy)"],
+    "attacks": [],
+    "notes": "The most dangerous person in Blood Country does not carry a weapon. They can issue death certificates."
+  },
+  {
+    "name": "The Marloo", "tier": "Rare", "category": "Entity",
+    "region": "Kimberley ochre gorge",
+    "st": 18, "dx": 14, "iq": 6, "ht": 16, "hp": 24, "will": 14, "per": 16, "fp": 18,
+    "speed": 7.5, "move": "12", "sm": 1, "dr": 4,
+    "traits": ["Alternate Form (any animal that died in its territory)", "Doesn't Sleep", "Indomitable", "Night Vision 9", "Silence 4", "Unfazeable"],
+    "attacks": [],
+    "notes": "Wants the drill core returned. Fright Checks: first sighting -2, form change -5. Ochre across a threshold forces Will-4; cannot cross running water."
+  },
+  {
+    "name": "The Entity in the Yarra", "tier": "Exclusive", "category": "Entity",
+    "region": "Melbourne, Birrarung basalt channel",
+    "st": 60, "dx": 0, "iq": 2, "ht": 30, "hp": 999, "will": 0, "per": 14, "fp": 0,
+    "speed": 0.0, "move": "River current", "sm": 8, "dr": 0,
+    "traits": ["Cannot be harmed", "Presence Feeding (within 50m, Will<12 loses 1 FP/hour)", "Binding Susceptibility (-6 Move)"],
+    "attacks": [],
+    "notes": "Cannot be fought or negotiated with, only acknowledged. Looking at it when told not to: Fright Check -3."
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "eastern_brown": {
+    "name": "Eastern Brown Snake", "antivenin": "Yes",
+    "stages": [
+      {"minutes": 0,   "mod": 0,  "effect": "Anaphylaxis: 2d damage, lose 2 FP"},
+      {"minutes": 30,  "mod": -2, "effect": "Coagulopathy: cannot stop bleeding from any wound"},
+      {"minutes": 120, "mod": -3, "effect": "Neurotoxin: -3 to DX and IQ"},
+      {"minutes": 240, "mod": -4, "effect": "Cardiac: lose 1d HP"}
+    ]
+  },
+  "inland_taipan": {
+    "name": "Inland Taipan", "antivenin": "Yes (taipan-specific)",
+    "stages": [
+      {"minutes": 5,   "mod": 0,  "effect": "1d HP, confusion (-2 IQ)"},
+      {"minutes": 30,  "mod": -2, "effect": "Coagulopathy: wounds bleed until clotted externally"},
+      {"minutes": 60,  "mod": -3, "effect": "Neurotoxic paralysis: -4 DX, -3 Move"},
+      {"minutes": 120, "mod": -4, "effect": "Respiratory depression: lose 2 FP per 10 minutes"},
+      {"minutes": 180, "mod": -5, "effect": "Cardiac involvement: 2d HP"}
+    ]
+  },
+  "king_brown": {
+    "name": "King Brown (Mulga) Snake", "antivenin": "Yes",
+    "stages": [
+      {"minutes": 0,   "mod": 0,  "effect": "1d HP muscle damage at bite site"},
+      {"minutes": 60,  "mod": -2, "effect": "Generalised myotoxicity: -2 ST, -2 HT"},
+      {"minutes": 180, "mod": -3, "effect": "Renal involvement: lose 2 FP per hour"},
+      {"minutes": 360, "mod": -4, "effect": "Critical: 2d HP damage"}
+    ]
+  },
+  "tiger_snake": {
+    "name": "Tiger Snake", "antivenin": "Yes",
+    "stages": [
+      {"minutes": 15, "mod": 0,  "effect": "Local pain, sweating, nausea"},
+      {"minutes": 45, "mod": -2, "effect": "Coagulopathy: wounds bleed freely"},
+      {"minutes": 90, "mod": -3, "effect": "Neurotoxicity: -2 DX, -1 IQ"},
+      {"minutes": 180,"mod": -4, "effect": "Myotoxicity: -2 ST, muscle breakdown"},
+      {"minutes": 300,"mod": -5, "effect": "Renal involvement: 2d HP"}
+    ]
+  },
+  "funnel_web": {
+    "name": "Funnel-web Spider", "antivenin": "Yes",
+    "stages": [
+      {"minutes": 0,   "mod": 0,  "effect": "Pain, sweating, salivation"},
+      {"minutes": 15,  "mod": -2, "effect": "Muscle spasm: -2 DX"},
+      {"minutes": 30,  "mod": -3, "effect": "Hypertension, tachycardia: -2 effective HT"},
+      {"minutes": 60,  "mod": -4, "effect": "Pulmonary oedema: 1d HP, lose 2 FP per 30 min"},
+      {"minutes": 120, "mod": -5, "effect": "Critical: 2d HP. Fatal without antivenin"}
+    ]
+  },
+  "blue_ringed_octopus": {
+    "name": "Blue-ringed Octopus", "antivenin": "NONE (artificial respiration only)",
+    "stages": [
+      {"minutes": 10, "mod": 0,  "effect": "Numbness, tingling, nausea: -1 DX"},
+      {"minutes": 20, "mod": -2, "effect": "Paralysis begins: -3 DX, -2 Move"},
+      {"minutes": 30, "mod": -3, "effect": "Respiratory paralysis: lose 2 FP per minute"},
+      {"minutes": 40, "mod": -4, "effect": "Full paralysis"},
+      {"minutes": 60, "mod": -5, "effect": "Respiratory failure: 1 HP per minute without assisted breathing"}
+    ]
+  },
+  "redback": {
+    "name": "Redback Spider", "antivenin": "Yes",
+    "stages": [
+      {"minutes": 15, "mod": -1, "effect": "Pain spreads: lose 1d FP, 1d hours of severe cramps"}
+    ]
+  }
+}
