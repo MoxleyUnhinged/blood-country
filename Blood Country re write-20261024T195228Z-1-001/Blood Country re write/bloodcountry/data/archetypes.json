@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Tradie", "concept": "Fixer, mechanic, bush engineer",
+    "st": 11, "dx": 11, "iq": 10, "cn": 11,
+    "advantages": [["High Manual Dexterity", 5], ["Fit", 5], ["Common Sense", 10]],
+    "disadvantages": [["Code of Honor (Working Class)", -5], ["Overconfidence", -5], ["Duty (Family or Employer)", -5], ["Distrusts computers (quirk)", -1]],
+    "skills": [["Mechanic (Automobile)", "IQ", "Average", 3], ["Electronics Repair (Comms)", "IQ", "Hard", 2],
+               ["Electrical Repair", "IQ", "Average", 3], ["Driving (Automobile)", "DX", "Average", 1],
+               ["Observation", "Per", "Average", 2], ["Knife", "DX", "Easy", 1]]
+  },
+  {
+    "name": "Journo", "concept": "Reporter, researcher, truth-seeker",
+    "st": 9, "dx": 10, "iq": 12, "cn": 10,
+    "advantages": [["Curiosity", -5], ["Voice", 10], ["Contacts (Media)", 5]],
+    "disadvantages": [["Obsession (Expose the Truth)", -10], ["Enemy (Government Watcher)", -10], ["Insomnia", -10]],
+    "skills": [["Research", "IQ", "Average", 2], ["Writing", "IQ", "Average", 1], ["Fast-Talk", "IQ", "Average", 0],
+               ["Diplomacy", "IQ", "Hard", 0], ["Photography", "IQ", "Average", 0], ["Detect Lies", "Per", "Hard", 0]]
+  },
+  {
+    "name": "Cop", "concept": "Rural, federal or ex-cop",
+    "st": 11, "dx": 11, "iq": 11, "cn": 11,
+    "advantages": [["Legal Enforcement Powers", 5], ["Fit", 5], ["Reputation (Reliable Copper)", 5]],
+    "disadvantages": [["Sense of Duty (Protect the Public)", -10], ["Enemy (Internal Affairs)", -5], ["Bad Temper", -10]],
+    "skills": [["Guns (Pistol)", "DX", "Easy", 2], ["Law (Police Procedure)", "IQ", "Hard", 1],
+               ["Criminology", "IQ", "Average", 1], ["Interrogation", "IQ", "Average", 1],
+               ["Driving (Automobile)", "DX", "Average", 1], ["First Aid", "IQ", "Easy", 1]]
+  },
+  {
+    "name": "Ranger", "concept": "Park, wildlife or remote area ranger",
+    "st": 11, "dx": 11, "iq": 11, "cn": 12,
+    "advantages": [["Absolute Direction", 5], ["Outdoorsman 1", 10], ["Animal Empathy", 5]],
+    "disadvantages": [["Code of Honor (Caretaker of the Land)", -5], ["Stubbornness", -5], ["Sense of Duty (Environment)", -5]],
+    "skills": [["Survival (Bush)", "Per", "Average", 2], ["Tracking", "Per", "Average", 1], ["Naturalist", "IQ", "Hard", 1],
+               ["Observation", "Per", "Average", 1], ["Stealth", "DX", "Average", 1], ["Guns (Rifle)", "DX", "Easy", 1]]
+  },
+  {
+    "name": "Academic", "concept": "Anthropologist, occultist, historian",
+    "st": 9, "dx": 10, "iq": 13, "cn": 10,
+    "advantages": [["Eidetic Memory", 5], ["Language Talent", 10], ["Claim to Hospitality (Academic Circles)", 5]],
+    "disadvantages": [["Social Stigma (Ivory Tower)", -5], ["Low Pain Threshold", -10], ["Compulsive Note-Taking", -5]],
+    "skills": [["Occultism", "IQ", "Average", 1], ["Anthropology (Aboriginal)", "IQ", "Hard", 0], ["History (Australia)", "IQ", "Hard", 0],
+               ["Research", "IQ", "Average", 1], ["Writing", "IQ", "Average", -1], ["Ritual Magic (non-spell)", "IQ", "Very Hard", 0]]
+  },
+  {
+    "name": "Local", "concept": "Townie, drifter, bush kid",
+    "st": 10, "dx": 11, "iq": 10, "cn": 12,
+    "advantages": [["Area Knowledge (Region)", 5], ["Cultural Familiarity (Local)", 1], ["Luck (minor)", 15]],
+    "disadvantages": [["Secret (Knows Too Much)", -10], ["Phobia (Specific Place or Sound)", -10], ["Low Self-Control Impulses", -5]],
+    "skills": [["Streetwise", "IQ", "Average", 2], ["Survival (Local)", "Per", "Average", 2], ["Observation", "Per", "Average", 2],
+               ["Fast-Talk", "IQ", "Average", 1], ["Knife", "DX", "Easy", 1], ["Scrounging", "IQ", "Easy", 3]]
+  }
+]
